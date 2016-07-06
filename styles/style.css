@@ -1,0 +1,95 @@
+
+  #slotMachine, .reel, .lever {display: inline-block;}
+
+
+#slotMachine {
+  border-radius: 30px;
+  padding: 20px 0 20px 20px;
+}
+
+  .reel {
+
+    text-align:center;
+    float: left;
+    padding:0 10px;
+    width: 80px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
+  }
+    .reel .innerReel {
+      position: relative;
+      top: -10px;
+      padding: 15px;
+    }
+
+    .reel .innerReel div {
+      position: relative;
+      height: 30px;
+      padding: 15px;
+    }
+    .reel p {
+      font-weight: bold;
+      height: 60px;
+      margin-top: 10px;
+    }
+    .reel p:nth-child(1) {color:#c60}
+    .reel p:nth-child(2) {color:#690}
+    .reel p:nth-child(3) {color:#630}
+
+
+
+
+
+\\\\\\\
+
+
+
+#slotMachine {
+
+}
+
+
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
