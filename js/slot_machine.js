@@ -12,6 +12,7 @@
             var speed = 1000;
             spinReel();
             function spinReel(){
+                $(divId + ' .innerReel').css('top', '-50px')
                 $(divId + ' .innerReel').animate( {
                     top: "-230px"
                 }, speed, 'linear',function(){
@@ -22,6 +23,7 @@
                         spinReel(divId, finalPosition);
                     }
                     else {
+                        console.log(speed + 'is speed - div is' + divId)
                         $(divId + ' .innerReel').animate( {
                             top: finalPosition
                         }, speed, 'linear',function(){
@@ -33,9 +35,13 @@
         }
         for (var i = 0; i < 3; i++){
             var endNum = Math.floor( Math.random() * (1 + 2 - 0) ) + 0;
-            finalPositions[i] = "-" + (60 * (endNum + 1) - 10 ) + "px";
+            finalPositions[i] = "-" + (230 - (60 * endNum)) + "px";
             executeSpin(divIds[i],finalPositions[i]);
         };
+
+        if (finalPositions[0]===finalPositions[1] && finalPositions[0]===finalPositions[2]) {
+
+        }
         // function finalRotation(){
 
         // }
