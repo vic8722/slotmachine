@@ -10,42 +10,48 @@
         var endNum = [];
         var itemDivHeight = 60;
         var finalStopPos = 230;
-        function executeSpin(divId, finalPosition, callback){
+        var initialPos = '-50px';
+        var reelCount = 3;
+        function executeSpin(divId, finalPosition){
+            var $reel = $(divId + ' .innerReel');
             var loopCount = 0;
             var speed = 500;
             spinReel();
             function spinReel(){
-                $(divId + ' .innerReel').css('top', '-50px')
-                $(divId + ' .innerReel').animate( {
+                $reel.css('top', initialPos)
+                $reel.animate( {
                     top: "-230px"
                 }, speed, 'linear',function(){
                     loopCount++;
                     speed += speed * .2
-                    $(divId + ' .innerReel').css('top', '-50px')
+                    $reel.css('top', initialPos)
                     if (loopCount < 4) {
                         spinReel(divId, finalPosition);
                     }
                     else {
                         console.log(speed + 'is speed - div is' + divId)
-                        $(divId + ' .innerReel').animate( {
+                        $reel.animate( {
                             top: finalPosition
-                        }, speed, 'linear',function(){
-                            callback();
-                        });
+                        }, speed, 'linear',declareWinner);
 
                     }
                 });
             };
         }
-        for (var i = 0; i < 3; i++){
-            endNum[i] = Math.floor( Math.random() * (1 + 2 - 0) ) + 0;
+        for (var i = 0; i < reelCount; i++){
+            endNum[i] = Math.floor( Math.random() * reelCount);
             var finalPositions = "-" + (finalStopPos - (itemDivHeight * endNum[i])) + "px";
             executeSpin(divIds[i],finalPositions,declareWinner);
         };
         function declareWinner(){
+            var message;
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
-                $('#winnerStatus').html('Congratulations you won '+ prizes[endNum[0]]);
+                message = 'Congratulations you won '+ prizes[endNum[0]] + '!!';
             }
+            else {
+                message = 'Rats! Try again?';
+            }
+            $('#winnerStatus').html(message);
         };
         // function finalRotation(){
 
