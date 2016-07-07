@@ -108,6 +108,6 @@
 }
 
 @keyframes blinkYellow {
-    0%,100% { background-color: #9a9a20; box-shadow: #828255 0px -1px 1px 1px, inset #6d6d57 2px -6px 15px;}
+    0%,100% { background-color: #cacab3; box-shadow: #c3c371 0px -1px 1px 1px, inset #a5a57d 2px -6px 15px;}
     50% { background-color: #ffff00; box-shadow: #ffff00 0px 0px 22px 4px, #afaf74 0px 0px 6px 1px, inset #b3b32e 1px -2px 9px 0px;}
 }
