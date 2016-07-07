@@ -1,15 +1,18 @@
 (function($){
-    var reelChoices = [['coffee maker', 'teapot', 'espresso machine'],['coffee filter', 'tea strainer', 'espresso tamper'],['coffee grounds', 'loose tea', 'ground espresso beans']];
+    var prizes = ['a tea', 'a coffee', 'an espresso'];
     var reelDiv = "<div class='reel' id='reelOne'><div class='innerReel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reelTwo'><div class='innerReel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reelThree'><div class='innerReel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
 
     $('#slotMachine').html(reelDiv);
     $('#playFancy').on('click',function(){
         console.log("i'm clicked")
+        $('#winnerStatus').html('');
         var divIds = ['#reelOne','#reelTwo','#reelThree'];
-        var finalPositions = [];
-        function executeSpin(divId, finalPosition){
+        var endNum = [];
+        var itemDivHeight = 60;
+        var finalStopPos = 230;
+        function executeSpin(divId, finalPosition, callback){
             var loopCount = 0;
-            var speed = 1000;
+            var speed = 500;
             spinReel();
             function spinReel(){
                 $(divId + ' .innerReel').css('top', '-50px')
@@ -19,7 +22,7 @@
                     loopCount++;
                     speed += speed * .2
                     $(divId + ' .innerReel').css('top', '-50px')
-                    if (loopCount < 2) {
+                    if (loopCount < 4) {
                         spinReel(divId, finalPosition);
                     }
                     else {
@@ -27,6 +30,7 @@
                         $(divId + ' .innerReel').animate( {
                             top: finalPosition
                         }, speed, 'linear',function(){
+                            callback();
                         });
 
                     }
@@ -34,14 +38,15 @@
             };
         }
         for (var i = 0; i < 3; i++){
-            var endNum = Math.floor( Math.random() * (1 + 2 - 0) ) + 0;
-            finalPositions[i] = "-" + (230 - (60 * endNum)) + "px";
-            executeSpin(divIds[i],finalPositions[i]);
+            endNum[i] = Math.floor( Math.random() * (1 + 2 - 0) ) + 0;
+            var finalPositions = "-" + (finalStopPos - (itemDivHeight * endNum[i])) + "px";
+            executeSpin(divIds[i],finalPositions,declareWinner);
         };
-
-        if (finalPositions[0]===finalPositions[1] && finalPositions[0]===finalPositions[2]) {
-
-        }
+        function declareWinner(){
+            if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
+                $('#winnerStatus').html('Congratulations you won '+ prizes[endNum[0]]);
+            }
+        };
         // function finalRotation(){
 
         // }
