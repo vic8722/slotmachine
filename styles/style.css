@@ -1,28 +1,60 @@
 
-  #slotMachine, .reel, .lever {display: inline-block;}
 
+#slotMachine, .reel, .lever {display: inline-block;}
+
+#playFancy {
+  margin: auto;
+  display: flex;
+}
 
 #slotMachine {
   border-radius: 30px;
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 20px 0;
+  display: flex;
 }
+
+
+#slotMachine {
+  position: relative;
+  width: 70%;
+  height: 100px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+}
+#slotMachine:before {
+  content: '';
+  position: absolute;
+  top: 9%;
+  bottom: 9%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5% / 50%;
+}
+
+
 
   .reel {
 
     text-align:center;
     float: left;
     padding:0 10px;
-    width: 80px;
+    width: 120px;
     height: 100px;
     overflow: hidden;
-    margin-right: 20px;
-    border-radius: 10px;
+    margin: auto;
+    border-radius: 22px;
     box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
   }
     .reel .innerReel {
       position: relative;
       top: -10px;
       padding: 15px;
+      background: #7095bf;
     }
 
     .reel .innerReel div {
@@ -55,6 +87,7 @@
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
+  background-color: #3f3b7b;
 }
 
 
@@ -70,16 +103,17 @@ p, li {
 }
 
 
-html {
-  background-color: #00539F;
-}
-
 body {
   width: 600px;
-  margin: 0 auto;
-  background-color: #FF9500;
+  margin: 10% auto;
+  background-color: #969696;
   padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  /*border: 5px solid black;*/
+  border: 20px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);
+    border-image-slice: 1;
 }
 
 h1 {
