@@ -219,3 +219,23 @@ img {
 #playFancy:focus {
   background: rgb(221, 221, 221);
 }
+
+
+/*Positioning Lights CSS*/
+
+.lights {
+  width: 24px;
+  position: absolute;
+  z-index: 3;
+  top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#lights1 {
+  left: 50px;
+}
+
+#lights2 {
+  right: 50px;
+}
