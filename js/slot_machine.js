@@ -4,6 +4,9 @@
 
     $('#slotMachine').html(reelDiv);
     $('#playFancy').on('click',function(){
+        $("#winner").removeClass('winner');
+        $(".led-orange").removeClass('blink-orange');
+        $(".led-blue").removeClass('blink-blue');
         console.log("i'm clicked")
         $('#winnerStatus').html('');
         var divIds = ['#reelOne','#reelTwo','#reelThree'];
@@ -47,6 +50,9 @@
             var message;
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
                 message = 'Congratulations you won '+ prizes[endNum[0]] + '!!';
+                $("#winner").addClass('winner');
+                $(".led-orange").addClass('blink-orange');
+                $(".led-blue").addClass('blink-blue');
             }
             else {
                 message = 'Rats! Try again?';
