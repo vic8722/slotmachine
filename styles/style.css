@@ -233,9 +233,11 @@ img {
 }
 
 #lights1 {
-  left: 50px;
+  left: 660px;
+  right: 0px;
 }
 
 #lights2 {
-  right: 50px;
+  right: 660px;
+  left: 0px;
 }
