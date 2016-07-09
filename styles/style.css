@@ -241,3 +241,13 @@ img {
   right: 660px;
   left: 0px;
 }
+
+#winner {
+  position: absolute;
+  z-index: 4;
+  top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
