@@ -21,10 +21,6 @@
   border: 50px solid rgba(0,0,0,0);
   border-top: 0 solid;
   border-bottom: 110px solid #1abc9c;
-  font: normal 100%/normal Arial, Helvetica, sans-serif;
-  color: rgba(0,0,0,1);
-  -o-text-overflow: clip;
-  text-overflow: clip;
 }
 
 #middle {
@@ -34,12 +30,8 @@
   width: 800px;
   height: 0px;
   border: 10px solid rgba(0,0,0,0);
-  border-top: 280px solid #1abc9c;
+  border-top: 500px solid #1abc9c;
   border-bottom: 0px solid;
-  font: normal 100%/normal Arial, Helvetica, sans-serif;
-  color: rgba(0,0,0,1);
-  -o-text-overflow: clip;
-  text-overflow: clip;
 }
 
 #bottom {
@@ -47,6 +39,34 @@
   width: 800px;
   height: 130px;
   background: #1abc9c;
+}
+
+#tray {
+  height: 110px;
+  width: 500px;
+  border: #138871 solid 4px;
+  background: black;
+  display: flex;
+  position: relative;
+  z-index: 5;
+  margin-left: auto;
+  margin-right: auto;
+  top: -190px;
+  background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 78%);
+}
+
+#tray-door {
+  height: 110px;
+  width: 500px;
+  border: #138871 solid 4px;
+  background: black;
+  display: flex;
+  position: relative;
+  z-index: 6;
+  margin-left: auto;
+  margin-right: auto;
+  top: -310px;
+  background: #138871;
 }
 
 
@@ -66,7 +86,7 @@
   width: 70%;
   height: 100px;
   margin: 20px auto;
-  background: #ffffff;
+  background: #163961;
   border-radius: 50% / 10%;
   color: white;
   text-align: center;
@@ -86,16 +106,18 @@
 
 
   .reel {
-
-    text-align:center;
+    text-align: center;
     float: left;
-    padding:0 10px;
+    padding: 0 10px;
     width: 120px;
     height: 100px;
     overflow: hidden;
-    margin: auto;
+    margin: auto 5px;
     border-radius: 22px;
-    box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
+    background: #d0d7de;
+    box-shadow: inset 2px 4px 1em #727279;
+    border: solid rgba(0, 0, 0, 0.33) 1px;
+    z-index: 1;
   }
     .reel .innerReel {
       position: relative;
@@ -108,6 +130,9 @@
       position: relative;
       height: 30px;
       padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .reel p {
       font-weight: bold;
@@ -132,8 +157,8 @@
 
 
 html {
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-family: Droid Sans, Helvetica;
   background-color: #3f3b7b;
 }
 
@@ -152,15 +177,11 @@ p, li {
 
 #wrapper {
   width: 600px;
-  margin: 10% auto;
-  background-color: #969696;
-  padding: 0 20px 20px 20px;
-  /*border: 5px solid black;*/
-  border: 20px solid transparent;
-    -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-    -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-    border-image: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);
-    border-image-slice: 1;
+  height: 245px;
+  background: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);
+  padding: 20px 20px 20px 20px;
+  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+  border-radius: 10%;
   z-index: 2;
   position: relative;
   margin: auto;
@@ -172,16 +193,6 @@ h1 {
   padding: 20px 0;
   color: #00539F;
   text-shadow: 3px 3px 1px black;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
-
-#playFancy {
-  margin: auto;
-  display: flex;
 }
 
 #playFancy {
@@ -218,6 +229,7 @@ img {
 
 #playFancy:focus {
   background: rgb(221, 221, 221);
+  outline: 0;
 }
 
 
@@ -227,22 +239,23 @@ img {
   width: 24px;
   position: absolute;
   z-index: 3;
-  top: 140px;
+  top: 153px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #lights1 {
-  left: 660px;
+  left: 600px;
   right: 0px;
 }
 
 #lights2 {
-  right: 660px;
+  right: 600px;
   left: 0px;
 }
 
 #winner {
+  font-size: 70px;
   position: absolute;
   z-index: 4;
   top: 0px;
@@ -250,4 +263,16 @@ img {
   margin-right: auto;
   left: 0;
   right: 0;
+}
+
+#tea-img {
+  z-index: 5;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 613px;
 }
