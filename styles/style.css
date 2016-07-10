@@ -22,19 +22,6 @@
   border-top: 0 solid;
   border-bottom: 110px solid #1abc9c;
 }
-  #top-inside {
-    position: absolute;
-    z-index: 1;
-    -moz-box-sizing: content-box;
-    width: 708px;
-    border: 46px solid rgba(0,0,0,0);
-    border-bottom: 100px solid #1a26bc;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: -39px;
-  }
 
 #middle {
   -webkit-box-sizing: content-box;
@@ -52,6 +39,44 @@
   width: 800px;
   height: 130px;
   background: #1abc9c;
+}
+
+#top-inside {
+  position: absolute;
+  z-index: 1;
+  -moz-box-sizing: content-box;
+  width: 708px;
+  border: 46px solid rgba(0,0,0,0);
+  border-bottom: 100px solid #1a26bc;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -39px;
+}
+
+#middle-inside {
+  position: absolute;
+  z-index: 1;
+  width: 780px;
+  height: 0px;
+  border: 10px solid rgba(0,0,0,0);
+  border-top: 482px solid #1a26bc;
+  border-bottom: 0px solid;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 117px;
+}
+
+#bottom-inside {
+  position: absolute;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #tray {
