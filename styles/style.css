@@ -232,8 +232,8 @@
 
 #slotMachine {
   position: relative;
-  width: 70%;
-  height: 100px;
+  width: 82%;
+  height: 220px;
   margin: 20px auto;
   background: #194982;
   border-radius: 50% / 10%;
@@ -326,16 +326,16 @@ p, li {
 
 
 #wrapper {
-  width: 600px;
-  height: 245px;
-  background: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);
+  width: 740px;
+  height: 385px;
+  /*background: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);*/
   padding: 20px 20px 20px 20px;
   -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
   border-radius: 10%;
   z-index: 2;
   position: relative;
   margin: auto;
-  top: 350px;
+  top: 285px;
 }
 
 h1 {
@@ -346,7 +346,15 @@ h1 {
 }
 
 #playFancy {
+  width: 233px;
+  height: 71px;
+  top: 316px;
+  left: 0;
+  right: 0;
   margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
   display: flex;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
