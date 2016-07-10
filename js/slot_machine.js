@@ -76,8 +76,6 @@ var openDoor = function(prizeFunc){
     $("#tray-door").animate( {
         height: "10px"
         }, 400, 'linear',function(){
-            console.log(prizeFunc);
-            prizeTea();
             prizeFunc();
         })
 };
@@ -99,14 +97,14 @@ var prizeWon = function(prizeFunc){
     openDoor(prizeFunc);
 };
 
-var prizeTea = function(){
+function prizeTea(){
     $("#tea-img").animate({height: "72px"},800,'linear')
 };
 
-var prizeEspresso = function(){
-    $("#tea-img").animate({height: "50px"},800,'linear')
+function prizeEspresso(){
+    $("#espresso-img").animate({height: "50px"},800,'linear')
 };
 
-var prizeCoffee = function(){
-    $("#tea-img").animate({height: "82px"},800,'linear')
+function prizeCoffee(){
+    $("#coffee-img").animate({height: "82px"},800,'linear')
 };
