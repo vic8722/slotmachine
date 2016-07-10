@@ -1,5 +1,6 @@
 (function($){
     var prizes = ['a tea', 'a coffee', 'an espresso'];
+    var displayPrizes = [prizeTea, prizeEspresso, prizeCoffee];
     var reelDiv = "<div class='reel' id='reelOne'><div class='innerReel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reelTwo'><div class='innerReel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reelThree'><div class='innerReel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
 
     $('#slotMachine').html(reelDiv);
@@ -49,11 +50,12 @@
             var finalPositions = "-" + (finalStopPos - (itemDivHeight * endNum[i])) + "px";
             executeSpin(divIds[i],finalPositions,declareWinner);
         };
+        endNum = [endNum[0],endNum[0],endNum[0]]; // just for testing... always make a win.
         function declareWinner(){
             var message;
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
                 message = 'Congratulations you won '+ prizes[endNum[0]] + '!!';
-                prizeWon();
+                prizeWon(displayPrizes[endNum[0]]);
             }
             else {
                 message = 'Rats! Try again?';
@@ -66,14 +68,18 @@
 })(jQuery);
 
 
-var openDoor = function(){
-    $("#tea-img").css({
+var openDoor = function(prizeFunc){
+    $(".images").css({
         'display': 'flex',
         'height': '0px'
     });
     $("#tray-door").animate( {
         height: "10px"
-        }, 400, 'linear',prizeTea)
+        }, 400, 'linear',function(){
+            console.log(prizeFunc);
+            prizeTea();
+            prizeFunc();
+        })
 };
 
 var closeDoor = function(){
@@ -84,16 +90,23 @@ var closeDoor = function(){
         })
 };
 
-var prizeWon = function(){
+var prizeWon = function(prizeFunc){
     $("#winner").addClass('winner');
     $("#winner").html('WINNER!');
     $(".led-orange").addClass('blink-orange');
     $(".led-blue").addClass('blink-blue');
 
-    openDoor();
+    openDoor(prizeFunc);
 };
 
 var prizeTea = function(){
+    $("#tea-img").animate({height: "72px"},800,'linear')
+};
 
+var prizeEspresso = function(){
     $("#tea-img").animate({height: "50px"},800,'linear')
+};
+
+var prizeCoffee = function(){
+    $("#tea-img").animate({height: "82px"},800,'linear')
 };

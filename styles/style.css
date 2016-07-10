@@ -266,13 +266,26 @@ h1 {
 }
 
 #tea-img {
-  z-index: 5;
+  height: 72px;
+  top: 593px;
+}
+
+#espresso-img {
   height: 50px;
+  top: 613px;
+}
+
+#coffee-img {
+  height: 82px;
+  top: 582px;
+}
+
+.images {
+  z-index: 5;
   position: absolute;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 613px;
 }
