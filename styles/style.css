@@ -201,7 +201,6 @@ h1 {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  cursor: pointer;
   padding: 0 20px;
   border: none;
   -webkit-border-radius: 20px;
@@ -288,4 +287,11 @@ h1 {
   margin-right: auto;
   left: 0;
   right: 0;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }
