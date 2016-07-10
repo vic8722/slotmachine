@@ -5,6 +5,7 @@
 
     $('#slotMachine').html(reelDiv);
     $('#playFancy').on('click',function(){
+        buttonPush();
         closeDoor();
         $("#winner").removeClass('winner');
         $("#winner").html('');
@@ -93,8 +94,9 @@ var prizeWon = function(prizeFunc){
     $("#winner").html('WINNER!');
     $(".led-orange").addClass('blink-orange');
     $(".led-blue").addClass('blink-blue');
-
     openDoor(prizeFunc);
+    $("#handle-joint1").removeClass("pullHandle");
+    $("#handle-joint2").removeClass("pullHandle");
 };
 
 function prizeTea(){
@@ -108,3 +110,25 @@ function prizeEspresso(){
 function prizeCoffee(){
     $("#coffee-img").animate({height: "82px"},800,'linear')
 };
+
+function buttonPush(){
+    console.log("pushed button");
+    $("#handle-joint1").addClass("pullHandle");
+    $("#handle-joint2").addClass("pullHandle");
+    $("#handle-arm1").animate({top: "300px",
+        height: "0px"},1000,'linear',function(){
+        $("#handle-arm1").animate({top: "45px",
+        height: "240px"},1000,'linear');
+    });
+    $("#handle-ball").animate({
+        top: "258px",
+        height: "64px",
+        width: "64px",
+        left: "14px"},1000,'linear',function(){
+        $("#handle-ball").animate({
+        top: "10px",
+        height: "39px",
+        width: "39px",
+        left: "27px"},1000,'linear');
+    });
+}

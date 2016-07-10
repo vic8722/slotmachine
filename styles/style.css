@@ -89,7 +89,6 @@
   margin-right: auto;
   left: 940px;
   right: 0;
-  border: solid black;
   top: 160px;
   width: 160px;
   height: 400px;
@@ -98,10 +97,10 @@
 #handle-joint1, #handle-joint2 {
   height: 75px;
   width: 31px;
-  position: relative;
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: -60px;
+  left: -117px;
   right: 0;
   top: 251px;
   z-index: -1;
@@ -109,9 +108,9 @@
 }
 
 #handle-joint2 {
-  top: 188px;
+  top: 264px;
   right: 0px;
-  left: -36px;
+  left: -68px;
   height: 50px;
   width: 18px;
 }
@@ -119,29 +118,51 @@
 #handle-arm1 {
     height: 240px;
     width: 11px;
-    position: relative;
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left: -35px;
+    left: -67px;
     right: 0;
-    top: -80px;
+    top: 45px;
     z-index: 0;
     border-radius: 6px;
     background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+}
+
+.pullHandle {
+  background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+  -webkit-animation: pullHandle 1s infinite;
+  -moz-animation: pullHandle 1s infinite;
+  -ms-animation: pullHandle 1s infinite;
+  -o-animation: pullHandle 1s infinite;
+  animation: pullHandle 1s alternate 0s 2;
+}
+
+@keyframes pullHandle {
+    0% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%); }
+    10% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 52%,rgb(67, 67, 67) 100%); }
+    20% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 55%,rgb(67, 67, 67) 100%); }
+    30% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 57%,rgb(67, 67, 67) 100%); }
+    40% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 60%,rgb(67, 67, 67) 100%); }
+    50% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 62%,rgb(67, 67, 67) 100%); }
+    60% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 65%,rgb(67, 67, 67) 100%); }
+    70% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 67%,rgb(67, 67, 67) 100%); }
+    80% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 70%,rgb(67, 67, 67) 100%); }
+    90% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 72%,rgb(67, 67, 67) 100%); }
+    100% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 75%,rgb(67, 67, 67) 100%); }
 }
 
 #handle-ball {
   width: 39px;
   height: 39px;
   border-radius: 50%;
-  display: inline-block;
   background-color: #00e5ff;
   box-shadow: inset #097986 4px -6px 14px 1px,inset #0c98a9 4px -6px 27px 1px;
-  position: relative;
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: -352px;
-  left: 25px;
+  top: 10px;
+  left: 27px;
 }
 
 #tray {
