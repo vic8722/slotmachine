@@ -83,6 +83,67 @@
   top: 610px;
 }
 
+.handle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 940px;
+  right: 0;
+  border: solid black;
+  top: 160px;
+  width: 160px;
+  height: 400px;
+}
+
+#handle-joint1, #handle-joint2 {
+  height: 75px;
+  width: 31px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: -60px;
+  right: 0;
+  top: 251px;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+}
+
+#handle-joint2 {
+  top: 188px;
+  right: 0px;
+  left: -36px;
+  height: 50px;
+  width: 18px;
+}
+
+#handle-arm1 {
+    height: 240px;
+    width: 11px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: -35px;
+    right: 0;
+    top: -80px;
+    z-index: 0;
+    border-radius: 6px;
+    background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+}
+
+#handle-ball {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #00e5ff;
+  box-shadow: inset #097986 4px -6px 14px 1px,inset #0c98a9 4px -6px 27px 1px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: -352px;
+  left: 25px;
+}
+
 #tray {
   height: 110px;
   width: 500px;
