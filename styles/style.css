@@ -152,9 +152,10 @@
 }
 
 .pullHandle {
-  animation: pullHandle 1s alternate 0 2;
+  animation: pullHandle 1s alternate 0s 2;
   background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
+
 
 
 @keyframes pullHandle {

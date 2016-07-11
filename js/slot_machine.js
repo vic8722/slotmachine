@@ -20,7 +20,7 @@
                 $reel.css('top', initialPos)
                 $reel.animate({top: '-' + finalStopPos + 'px'}, speed, 'linear', function() {
                     loopCount++;
-                    speed + =  speed * .2
+                    speed +=  speed * .2
                     $reel.css('top', initialPos)
                     if (loopCount < 4) {
                         spinReel(divId, finalPosition);
