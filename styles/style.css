@@ -1,10 +1,10 @@
 /* Slot Machine Container */
 
 #slot-machine-container {
-  position: absolute;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
   z-index: 1;
 }
@@ -15,146 +15,147 @@
 }
 
 #top {
-  width: 720px;
-  height: 0;
   border: 50px solid rgba(0,0,0,0);
-  border-top: 0 solid;
   border-bottom: 110px solid #797979;
+  border-top: 0 solid;
+  height: 0;
+  width: 720px;
 }
 
 #middle {
-  width: 783px;
-  height: 0px;
   border: 18px solid rgba(0,0,0,0);
+  border-bottom: 0 solid;
   border-top: 160px solid #797979;
-  border-bottom: 0px solid;
+  height: 0;
+  width: 783px;
 }
 
 #middle2 {
-  width: 782px;
-  height: 0px;
   border: 40px solid rgba(0,0,0,0);
   border-bottom: 450px solid #797979;
-  border-top: 0px solid;
+  border-top: 0 solid;
+  height: 0;
+  width: 782px;
 }
 
 #bottom {
-  width: 862px;
-  height: 180px;
   background: #797979;
+  height: 180px;
+  width: 862px;
 }
 
 #top-inside {
-  position: absolute;
-  z-index: 1;
-  width: 708px;
   border: 46px solid rgba(0,0,0,0);
   border-bottom: 100px solid #1d5da7;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
   top: -39px;
+  width: 708px;
+  z-index: 1;
 }
 
 #middle-inside {
-  width: 757px;
-  height: 0px;
   border: 18px solid rgba(0,0,0,0);
+  border-bottom: 0 solid;
   border-top: 130px solid #1d5da7;
-  border-bottom: 0px solid;
-  position: absolute;
-  z-index: 3;
+  height: 0;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
   top: 117px;
+  width: 757px;
+  z-index: 3;
 }
 
 #middle2-inside {
-  position: absolute;
-  z-index: 1;
-  width: 742px;
-  height: 0px;
   border: 35px solid rgba(0,0,0,0);
   border-bottom: 430px solid #1d5da7;
-  border-top: 0px solid;
+  border-top: 0 solid;
+  height: 0;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
   top: 283px;
-}
-#bottom-inside {
-  position: absolute;
+  width: 742px;
   z-index: 1;
+}
+
+#bottom-inside {
+  background: #1d5da7;
+  height: 145px;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
-  width: 817px;
-  height: 145px;
-  background: #1d5da7;
   top: 730px;
+  width: 817px;
+  z-index: 1;
 }
 
 /* Handle Arm */
 
 .handle {
-  position: absolute;
+  height: 400px;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
   right: -973px;
-  left: 0;
   top: 330px;
   width: 160px;
-  height: 400px;
 }
 
-#handle-joint1, #handle-joint2 {
-  position: absolute;
+#handle-joint1,#handle-joint2 {
+  background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
   z-index: -1;
-  background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
 
 #handle-joint1 {
   height: 75px;
-  width: 31px;
   left: -117px;
   right: 0;
   top: 251px;
+  width: 31px;
 }
 
-
 #handle-joint2 {
-  top: 264px;
-  right: 0px;
-  left: -68px;
   height: 50px;
+  left: -68px;
+  right: 0;
+  top: 264px;
   width: 18px;
 }
 
 #handle-arm {
+  background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+  border-radius: 6px;
   height: 240px;
-  width: 11px;
-  position: absolute;
+  left: -67px;
   margin-left: auto;
   margin-right: auto;
-  left: -67px;
+  position: absolute;
   right: 0;
   top: 45px;
+  width: 11px;
   z-index: 0;
-  border-radius: 6px;
-  background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
 
 .pullHandle {
+  animation: pullHandle 1s alternate 0 2;
   background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
-  animation: pullHandle 1s alternate 0s 2;
 }
+
 
 @keyframes pullHandle {
     0% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%); }
@@ -171,187 +172,208 @@
 }
 
 #handle-ball {
-  width: 39px;
-  height: 39px;
-  border-radius: 50%;
   background-color: #2f88ef;
+  border-radius: 50%;
   box-shadow: inset #1d436f 4px -6px 14px 1px,inset #225ea5 4px -6px 27px 1px;
-  position: absolute;
+  height: 39px;
+  left: 27px;
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
   top: 10px;
-  left: 27px;
+  width: 39px;
 }
 
 /* Tray */
 
 #tray {
-  height: 110px;
-  width: 500px;
+  background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 78%);
   border: #4786ce solid 4px;
-  background: black;
   display: flex;
-  position: relative;
-  z-index: 5;
+  height: 110px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   top: -153px;
-  background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 78%);
+  width: 500px;
+  z-index: 5;
 }
 
 #tray-door {
-  height: 110px;
-  width: 500px;
+  background: #4786ce;
   border: #4786ce solid 4px;
-  background: black;
   display: flex;
-  position: relative;
-  z-index: 6;
+  height: 110px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   top: -273px;
-  background: #4786ce;
+  width: 500px;
+  z-index: 6;
 }
 
 /* Slot Machine Reels */
 
 #wrapper {
-  width: 740px;
-  height: 385px;
-  padding: 20px 20px 20px 20px;
   border-radius: 10%;
-  z-index: 2;
-  position: relative;
+  height: 385px;
   margin: auto;
+  padding: 20px;
+  position: relative;
   top: 285px;
+  width: 740px;
+  z-index: 2;
 }
 
 #slot-machine {
-  border-radius: 30px;
-  padding: 20px 0 20px 0;
-  display: flex;
-  position: relative;
-  width: 82%;
-  height: 220px;
-  margin: 20px auto;
   background: #194982;
   border-radius: 50% / 10%;
-  color: white;
+  color: #FFF;
+  display: flex;
+  height: 220px;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
   text-align: center;
   text-indent: .1em;
+  width: 82%;
 }
 
 #slot-machine:before {
-  content: '';
-  position: absolute;
-  top: 9%;
-  bottom: 9%;
-  right: -5%;
-  left: -5%;
   background: inherit;
   border-radius: 5% / 50%;
+  bottom: 9%;
+  content: '';
+  left: -5%;
+  position: absolute;
+  right: -5%;
+  top: 9%;
 }
 
 .reel {
-  display: inline-block;
-  text-align: center;
-  float: left;
-  padding: 0 10px;
-  width: 170px;
-  height: 180px;
-  overflow: hidden;
-  margin: auto;
-  border-radius: 22px;
   background: #d0d7de;
+  border: solid rgba(0,0,0,0.33) 1px;
+  border-radius: 22px;
   box-shadow: inset 2px 4px 1em #727279;
-  border: solid rgba(0, 0, 0, 0.33) 1px;
+  display: inline-block;
+  float: left;
+  height: 180px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: center;
+  width: 170px;
   z-index: 1;
 }
 
 .reel .inner-reel {
+  background: #7095bf;
+  padding: 15px;
   position: relative;
   top: -91px;
-  padding: 15px;
-  background: #7095bf;
 }
 
 .reel .inner-reel div {
-  letter-spacing: 2px;
-  font-size: 30px;
-  font-family: Bangers, Helvetica;
-  position: relative;
-  height: 80px;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border-bottom: rgba(0, 0, 0, 0.25) solid 2px;
+  border-bottom: rgba(0,0,0,0.25) solid 2px;
+  display: flex;
+  font-family: Bangers, Helvetica;
+  font-size: 30px;
+  height: 80px;
+  justify-content: center;
+  letter-spacing: 2px;
+  padding: 15px;
+  position: relative;
 }
 
 /*Positioning Lights CSS*/
 
 .lights {
-  width: 24px;
-  position: absolute;
-  z-index: 3;
-  top: 298px;
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
+  top: 298px;
+  width: 24px;
+  z-index: 3;
 }
 
 #lights1 {
-  transform: rotate(-4.5deg);
   left: 744px;
-  right: 0px;
+  right: 0;
+  transform: rotate(-4.5deg);
 }
 
 #lights2 {
-  transform: rotate(4.5deg);
+  left: 0;
   right: 744px;
-  left: 0px;
+  transform: rotate(4.5deg);
 }
 
 #lights3 {
-  width: 710px;
-  right: 0;
   left: 31px;
+  right: 0;
   top: 298px;
+  width: 710px;
 }
 
 #lights4 {
-  width: 780px;
-  right: 0;
   left: 40px;
+  right: 0;
   top: 688px;
+  width: 780px;
 }
 
 /* Slot Machine Features */
 
-#winner {
-  font-size: 115px;
-  position: absolute;
-  z-index: 4;
-  top: 84px;
+#win-status {
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
+}
+
+#winner {
+  font-size: 115px;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 77px;
   transform: perspective(520px) rotateX(-15deg);
+  z-index: 4;
+}
+
+#lost {
+  color: #05264c;
+  font-family: Orbitron, helvetica;
+  font-size: 65px;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 158px;
+  transform: perspective(520px) rotateX(-15deg);
+  z-index: 4;
 }
 
 #logo {
   color: #c6d7ea;
-  text-shadow: black 4px 5px;
+  font-family: Bangers, Helvetica;
   font-size: 100px;
-  position: absolute;
-  z-index: 4;
-  top: 5px;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  left: 0;
+  position: absolute;
   right: 0;
-  font-family: Bangers, Helvetica;
+  text-align: center;
+  text-shadow: #000 4px 5px;
+  top: 5px;
+  z-index: 4;
 }
 
 .thumbtack-logo {
@@ -361,13 +383,13 @@
 /* Images */
 
 .images {
-  z-index: 5;
-  position: absolute;
   display: flex;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
+  position: absolute;
   right: 0;
+  z-index: 5;
 }
 
 #tea-img {
@@ -388,15 +410,15 @@
 /* General */
 
 html {
-  font-size: 20px;
   background-color: #000000;
+  font-size: 20px;
 }
 
-#footer{
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
+#footer {
+  bottom: 0;
+  color: #FFF;
   font-family: Helvetica;
-  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
