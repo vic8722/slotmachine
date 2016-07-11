@@ -20,7 +20,7 @@
 #f47503 - orange*/
 
 .led-blue {
-  margin: 0 auto;
+  margin: 1px 1px auto;
   width: 24px;
   height: 24px;
   background-color: #cacab3;
@@ -61,7 +61,7 @@
 
 
 .led-orange {
-    margin: 0 auto;
+    margin: 1px 1px auto;
     width: 24px;
     height: 24px;
     background-color: #f47503;

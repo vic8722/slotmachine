@@ -258,10 +258,10 @@
     text-align: center;
     float: left;
     padding: 0 10px;
-    width: 120px;
-    height: 100px;
+    width: 170px;
+    height: 180px;
     overflow: hidden;
-    margin: auto 5px;
+    margin: auto;
     border-radius: 22px;
     background: #d0d7de;
     box-shadow: inset 2px 4px 1em #727279;
@@ -270,14 +270,17 @@
   }
     .reel .innerReel {
       position: relative;
-      top: -10px;
+      top: -91px;
       padding: 15px;
       background: #7095bf;
     }
 
     .reel .innerReel div {
+      letter-spacing: 2px;
+      font-size: 30px;
+      font-family: Bangers, Helvetica;
       position: relative;
-      height: 30px;
+      height: 80px;
       padding: 15px;
       display: flex;
       justify-content: center;
@@ -348,7 +351,7 @@ h1 {
 #playFancy {
   width: 233px;
   height: 71px;
-  top: 316px;
+  top: 311px;
   left: 0;
   right: 0;
   margin: auto;
@@ -396,19 +399,33 @@ h1 {
   width: 24px;
   position: absolute;
   z-index: 3;
-  top: 388px;
+  top: 298px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #lights1 {
-  left: 600px;
+  transform: rotate(-4.5deg);
+  left: 744px;
   right: 0px;
 }
 
 #lights2 {
-  right: 600px;
+  transform: rotate(4.5deg);
+  right: 744px;
   left: 0px;
+}
+
+#lights3 {
+  width: 710px;
+  left: 232px;
+  top: 298px;
+}
+
+#lights4 {
+  width: 780px;
+  left: 200px;
+  top: 689px;
 }
 
 #winner {
@@ -455,6 +472,7 @@ h1 {
 }
 
 #logo {
+  color: ##c6d7ea;
   font-size: 100px;
   position: absolute;
   z-index: 4;

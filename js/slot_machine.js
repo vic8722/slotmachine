@@ -1,6 +1,6 @@
 (function($){
     var prizes = ['a tea', 'a coffee', 'an espresso'];
-    var displayPrizes = [prizeTea, prizeEspresso, prizeCoffee];
+    var displayPrizes = [prizeTea, prizeCoffee, prizeEspresso];
     var reelDiv = "<div class='reel' id='reelOne'><div class='innerReel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reelTwo'><div class='innerReel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reelThree'><div class='innerReel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
 
     $('#slotMachine').html(reelDiv);
@@ -16,9 +16,9 @@
         $('#winnerStatus').html('');
         var divIds = ['#reelOne','#reelTwo','#reelThree'];
         var endNum = [];
-        var itemDivHeight = 60;
-        var finalStopPos = 230;
-        var initialPos = '-50px';
+        var itemDivHeight = 110;
+        var finalStopPos = 421;
+        var initialPos = '-91px';
         var reelCount = 3;
         function executeSpin(divId, finalPosition){
             var $reel = $(divId + ' .innerReel');
@@ -28,7 +28,7 @@
             function spinReel(){
                 $reel.css('top', initialPos)
                 $reel.animate( {
-                    top: "-230px"
+                    top: "-" + finalStopPos + "px"
                 }, speed, 'linear',function(){
                     loopCount++;
                     speed += speed * .2
@@ -51,7 +51,7 @@
             var finalPositions = "-" + (finalStopPos - (itemDivHeight * endNum[i])) + "px";
             executeSpin(divIds[i],finalPositions,declareWinner);
         };
-        endNum = [endNum[0],endNum[0],endNum[0]]; // just for testing... always make a win.
+        // endNum = [endNum[0],endNum[0],endNum[0]]; // just for testing... always make a win.
         function declareWinner(){
             var message;
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
