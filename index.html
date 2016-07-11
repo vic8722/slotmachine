@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Thumbtack Slot Machine Challenge</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="styles/button.css" rel="stylesheet" type="text/css">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
   <link href="styles/lights.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans|Monoton|Bangers' rel='stylesheet' type='text/css'>
@@ -20,11 +21,10 @@
     <div id="middle2-inside"></div>
     <div id="bottom-inside"></div>
     <div class="handle">
-      <div id="handle-joint1" ></div>
-      <div id="handle-joint2" ></div>
-      <div id="handle-arm1"></div>
-      <div id="handle-arm2"></div>
-      <div id="handle-ball"></div>
+      <div class="spin" id="handle-joint1" ></div>
+      <div class="spin" id="handle-joint2" ></div>
+      <div class="spin" id="handle-arm1"></div>
+      <div class="spin" id="handle-ball"></div>
     </div>
     <div id="logo"><img id="thumbtack-logo" src="https://static4.thumbtackstatic.com/theme/images/thumbtack2.png"/>Slot Machine  <img id="thumbtack-logo" src="https://static4.thumbtackstatic.com/theme/images/thumbtack2.png"/></div>
     <div class="machine" id="tray"></div>
@@ -121,7 +121,7 @@
       <div class="fancy">
         <div id="slotMachine">
         </div>
-        <input type="button" id="playFancy" value="Spin!">
+        <div class="button spin"><div class="outer"><div class="height"><div class="inner">SPIN</div></div></div></div>
       </div>
     </div>
   </div>
