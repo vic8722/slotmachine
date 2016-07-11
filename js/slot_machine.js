@@ -18,34 +18,30 @@
             // spinReel takes each reel and animates movement from one position through the list, lowering the speed each full 'spin'.
             function spinReel() {
                 $reel.css('top', initialPos)
-                $reel.animate( {
-                    top: '-' + finalStopPos + 'px'
-                }, speed, 'linear', function() {
+                $reel.animate({top: '-' + finalStopPos + 'px'}, speed, 'linear', function() {
                     loopCount++;
-                    speed += speed * .2
+                    speed + =  speed * .2
                     $reel.css('top', initialPos)
                     if (loopCount < 4) {
                         spinReel(divId, finalPosition);
                     }
                     else {
-                        $reel.animate( {
-                            top: finalPosition
-                        }, speed, 'linear', declareWinner);
-
+                        $reel.animate({top: finalPosition}, speed, 'linear', declareWinner);
                     }
                 });
             };
             spinReel(); // Triggering spin
         }
+
         function declareWinner() {
             $('#handle-joint1').removeClass('pullHandle');
             $('#handle-joint2').removeClass('pullHandle');
             hasBeenClicked = false;
-            if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
+            if (endNum[0] === endNum[1] && endNum[0] === endNum[2]) {
                 prizeWon(displayPrizes[endNum[0]]);
             }
             else {
-                $('#win-status').html('<span id=\'lost\'>You lost. Spin again.</span>');
+                $('#win-status').html('<span id = \'lost\'>You lost. Spin again.</span>');
             }
         };
         for (var i = 0; i < reelCount; i++) {
@@ -60,22 +56,18 @@ function openDoor(prizeFunc) {
         'display': 'flex',
         'height': '0px'
     });
-    $('#tray-door').animate( {
-        height: '10px'
-        }, 400, 'linear', function() {
+    $('#tray-door').animate({height: '10px'}, 400, 'linear', function() {
             prizeFunc();
         })
 };
 
 function closeDoor() {
-    $('#tray-door').animate( {
-        height: '110px'
-        }, 400, 'linear')
+    $('#tray-door').animate({height: '110px'}, 400, 'linear')
 };
 
 function prizeWon(prizeFunc) {
     $('#win-status').addClass('winner');
-    $('#win-status').html('<span id=\'winner\'>WINNER!</span>');
+    $('#win-status').html('<span id = \'winner\'>WINNER!</span>');
     $('.led-orange').addClass('blink-orange');
     $('.led-blue').addClass('blink-blue');
     openDoor(prizeFunc);
@@ -93,10 +85,12 @@ function prizeCoffee() {
     $('#coffee-img').animate({height: '82px'}, 800, 'linear')
 };
 
+// When the SPIN button is pushed or handle is clicked, animate the movement of the handle.
 function buttonPush() {
     $('#handle-joint1').addClass('pullHandle');
     $('#handle-joint2').addClass('pullHandle');
-    $('#handle-arm').animate({top: '300px',
+    $('#handle-arm').animate({
+        top: '300px',
         height: '0px'
     }, 1000, 'linear', function() {
         $('#handle-arm').animate({
@@ -111,11 +105,11 @@ function buttonPush() {
         left: '14px'
     }, 1000, 'linear', function() {
         $('#handle-ball').animate({
-        top: '10px',
-        height: '39px',
-        width: '39px',
-        left: '27px'
-    }, 1000, 'linear');
+            top: '10px',
+            height: '39px',
+            width: '39px',
+            left: '27px'
+        }, 1000, 'linear');
     });
 }
 
