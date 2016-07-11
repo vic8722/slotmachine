@@ -418,14 +418,16 @@ h1 {
 
 #lights3 {
   width: 710px;
-  left: 232px;
+  right: 0;
+  left: 31px;
   top: 298px;
 }
 
 #lights4 {
   width: 780px;
-  left: 200px;
-  top: 689px;
+  right: 0;
+  left: 40px;
+  top: 688px;
 }
 
 #winner {
