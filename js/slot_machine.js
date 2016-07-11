@@ -1,9 +1,6 @@
 (function($) {
     var displayPrizes = [prizeTea, prizeCoffee, prizeEspresso];
-    var reelDiv = "<div class='reel' id='reel1'><div class='inner-reel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reel2'><div class='inner-reel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reel3'><div class='inner-reel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
     var hasBeenClicked = false;
-
-    $('#slot-machine').html(reelDiv);
     $('.spin').on('click', function() {
         if (hasBeenClicked) return;
         hasBeenClicked = true;
@@ -22,7 +19,7 @@
             function spinReel() {
                 $reel.css('top', initialPos)
                 $reel.animate( {
-                    top: "-" + finalStopPos + "px"
+                    top: '-' + finalStopPos + 'px'
                 }, speed, 'linear', function() {
                     loopCount++;
                     speed += speed * .2
@@ -41,83 +38,83 @@
             spinReel(); // Triggering spin
         }
         function declareWinner() {
-            $("#handle-joint1").removeClass("pullHandle");
-            $("#handle-joint2").removeClass("pullHandle");
+            $('#handle-joint1').removeClass('pullHandle');
+            $('#handle-joint2').removeClass('pullHandle');
             hasBeenClicked = false;
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
                 prizeWon(displayPrizes[endNum[0]]);
             }
             else {
-                $("#win-status").html('<span id="lost">You lost. Spin again.</span>');
+                $('#win-status').html('<span id=\'lost\'>You lost. Spin again.</span>');
             }
         };
         for (var i = 0; i < reelCount; i++) {
             endNum[i] = Math.floor( Math.random() * reelCount);
-            var finalPositions = "-" + (finalStopPos - (itemDivHeight * endNum[i])) + "px";
+            var finalPositions = '-' + (finalStopPos - (itemDivHeight * endNum[i])) + 'px';
             executeSpin(divIds[i], finalPositions);
         };
     });
 
 function openDoor(prizeFunc) {
-    $(".images").css({
+    $('.images').css({
         'display': 'flex',
         'height': '0px'
     });
-    $("#tray-door").animate( {
-        height: "10px"
+    $('#tray-door').animate( {
+        height: '10px'
         }, 400, 'linear', function() {
             prizeFunc();
         })
 };
 
 function closeDoor() {
-    $("#tray-door").animate( {
-        height: "110px"
+    $('#tray-door').animate( {
+        height: '110px'
         }, 400, 'linear')
 };
 
 function prizeWon(prizeFunc) {
-    $("#win-status").addClass('winner');
-    $("#win-status").html('<span id="winner">WINNER!</span>');
-    $(".led-orange").addClass('blink-orange');
-    $(".led-blue").addClass('blink-blue');
+    $('#win-status').addClass('winner');
+    $('#win-status').html('<span id=\'winner\'>WINNER!</span>');
+    $('.led-orange').addClass('blink-orange');
+    $('.led-blue').addClass('blink-blue');
     openDoor(prizeFunc);
 };
 
 function prizeTea() {
-    $("#tea-img").animate({height: "72px"}, 800, 'linear')
+    $('#tea-img').animate({height: '72px'}, 800, 'linear')
 };
 
 function prizeEspresso() {
-    $("#espresso-img").animate({height: "50px"}, 800, 'linear')
+    $('#espresso-img').animate({height: '50px'}, 800, 'linear')
 };
 
 function prizeCoffee() {
-    $("#coffee-img").animate({height: "82px"}, 800, 'linear')
+    $('#coffee-img').animate({height: '82px'}, 800, 'linear')
 };
 
 function buttonPush() {
-    $("#handle-joint1").addClass("pullHandle");
-    $("#handle-joint2").addClass("pullHandle");
-    $("#handle-arm").animate({top: "300px",
-        height: "0px"
+    $('#handle-joint1').addClass('pullHandle');
+    $('#handle-joint2').addClass('pullHandle');
+    $('#handle-arm').animate({top: '300px',
+        height: '0px'
     }, 1000, 'linear', function() {
-        $("#handle-arm").animate({
-            top: "45px",
-            height: "240px"
+        $('#handle-arm').animate({
+            top: '45px',
+            height: '240px'
         }, 1000, 'linear');
     });
-    $("#handle-ball").animate({
-        top: "258px",
-        height: "64px",
-        width: "64px",
-        left: "14px"
+    $('#handle-ball').animate({
+        top: '258px',
+        height: '64px',
+        width: '64px',
+        left: '14px'
     }, 1000, 'linear', function() {
-        $("#handle-ball").animate({
-        top: "10px",
-        height: "39px",
-        width: "39px",
-        left: "27px"
+        $('#handle-ball').animate({
+        top: '10px',
+        height: '39px',
+        width: '39px',
+        left: '27px'
     }, 1000, 'linear');
     });
 }
@@ -125,11 +122,11 @@ function buttonPush() {
 function resetGame() {
     buttonPush();
     closeDoor();
-    $("#win-status").removeClass('winner');
-    $("#win-status").html('');
+    $('#win-status').removeClass('winner');
+    $('#win-status').html('');
 
-    $(".led-orange").removeClass('blink-orange');
-    $(".led-blue").removeClass('blink-blue');
+    $('.led-orange').removeClass('blink-orange');
+    $('.led-blue').removeClass('blink-blue');
 }
 
 })(jQuery);
