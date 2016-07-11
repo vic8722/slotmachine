@@ -473,11 +473,12 @@ h1 {
 }
 
 #logo {
-  color: ##c6d7ea;
+  color: #c6d7ea;
+  text-shadow: black 4px 5px;
   font-size: 100px;
   position: absolute;
   z-index: 4;
-  top: 7px;
+  top: 5px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
