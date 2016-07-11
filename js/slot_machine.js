@@ -1,9 +1,9 @@
 (function($){
     var prizes = ['a tea', 'a coffee', 'an espresso'];
     var displayPrizes = [prizeTea, prizeCoffee, prizeEspresso];
-    var reelDiv = "<div class='reel' id='reelOne'><div class='innerReel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reelTwo'><div class='innerReel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reelThree'><div class='innerReel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
+    var reelDiv = "<div class='reel' id='reel1'><div class='inner-reel'><div>coffee maker</div><div>teapot</div><div>espresso machine</div><div>coffee maker</div><div>teapot</div><div>espresso machine</div></div></div><div class='reel' id='reel2'><div class='inner-reel'><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div><div>coffee filter</div><div>tea strainer</div><div>espresso tamper</div></div></div><div class='reel' id='reel3'><div class='inner-reel'><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div><div>coffee grounds</div><div>loose tea</div><div>ground espresso beans</div></div></div>";
 
-    $('#slotMachine').html(reelDiv);
+    $('#slot-machine').html(reelDiv);
     $('.spin').on('click',function(){
         buttonPush();
         closeDoor();
@@ -12,16 +12,14 @@
 
         $(".led-orange").removeClass('blink-orange');
         $(".led-blue").removeClass('blink-blue');
-        console.log("i'm clicked")
-        $('#winnerStatus').html('');
-        var divIds = ['#reelOne','#reelTwo','#reelThree'];
+        var divIds = ['#reel1','#reel2','#reel3'];
         var endNum = [];
         var itemDivHeight = 110;
         var finalStopPos = 421;
         var initialPos = '-91px';
         var reelCount = 3;
         function executeSpin(divId, finalPosition){
-            var $reel = $(divId + ' .innerReel');
+            var $reel = $(divId + ' .inner-reel');
             var loopCount = 0;
             var speed = 500;
             spinReel();
@@ -59,6 +57,7 @@
                 prizeWon(displayPrizes[endNum[0]]);
             }
             else {
+                $("#winner").html('You lost. Spin again.');
             }
         };
     });
@@ -111,9 +110,9 @@ function buttonPush(){
     console.log("pushed button");
     $("#handle-joint1").addClass("pullHandle");
     $("#handle-joint2").addClass("pullHandle");
-    $("#handle-arm1").animate({top: "300px",
+    $("#handle-arm").animate({top: "300px",
         height: "0px"},1000,'linear',function(){
-        $("#handle-arm1").animate({top: "45px",
+        $("#handle-arm").animate({top: "45px",
         height: "240px"},1000,'linear');
     });
     $("#handle-ball").animate({

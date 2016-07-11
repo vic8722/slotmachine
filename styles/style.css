@@ -1,4 +1,6 @@
-#machineHolder {
+/* Slot Machine Container */
+
+#slot-machine-container {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -7,15 +9,12 @@
   z-index: 1;
 }
 
-.machine {
+.machine-structure {
   display: flex;
   margin: auto;
 }
 
 #top {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   width: 720px;
   height: 0;
   border: 50px solid rgba(0,0,0,0);
@@ -24,9 +23,6 @@
 }
 
 #middle {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   width: 783px;
   height: 0px;
   border: 18px solid rgba(0,0,0,0);
@@ -35,9 +31,6 @@
 }
 
 #middle2 {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   width: 782px;
   height: 0px;
   border: 40px solid rgba(0,0,0,0);
@@ -46,7 +39,6 @@
 }
 
 #bottom {
-  box-sizing: content-box;
   width: 862px;
   height: 180px;
   background: #797979;
@@ -55,7 +47,6 @@
 #top-inside {
   position: absolute;
   z-index: 1;
-  -moz-box-sizing: content-box;
   width: 708px;
   border: 46px solid rgba(0,0,0,0);
   border-bottom: 100px solid #1d5da7;
@@ -108,6 +99,8 @@
   top: 730px;
 }
 
+/* Handle Arm */
+
 .handle {
   position: absolute;
   margin-left: auto;
@@ -120,17 +113,21 @@
 }
 
 #handle-joint1, #handle-joint2 {
-  height: 75px;
-  width: 31px;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: -117px;
-  right: 0;
-  top: 251px;
   z-index: -1;
   background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
+
+#handle-joint1 {
+  height: 75px;
+  width: 31px;
+  left: -117px;
+  right: 0;
+  top: 251px;
+}
+
 
 #handle-joint2 {
   top: 264px;
@@ -140,26 +137,22 @@
   width: 18px;
 }
 
-#handle-arm1 {
-    height: 240px;
-    width: 11px;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: -67px;
-    right: 0;
-    top: 45px;
-    z-index: 0;
-    border-radius: 6px;
-    background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+#handle-arm {
+  height: 240px;
+  width: 11px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: -67px;
+  right: 0;
+  top: 45px;
+  z-index: 0;
+  border-radius: 6px;
+  background: linear-gradient(to right, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
 
 .pullHandle {
   background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
-  -webkit-animation: pullHandle 1s infinite;
-  -moz-animation: pullHandle 1s infinite;
-  -ms-animation: pullHandle 1s infinite;
-  -o-animation: pullHandle 1s infinite;
   animation: pullHandle 1s alternate 0s 2;
 }
 
@@ -190,6 +183,8 @@
   left: 27px;
 }
 
+/* Tray */
+
 #tray {
   height: 110px;
   width: 500px;
@@ -218,19 +213,23 @@
   background: #4786ce;
 }
 
+/* Slot Machine Reels */
 
+#wrapper {
+  width: 740px;
+  height: 385px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10%;
+  z-index: 2;
+  position: relative;
+  margin: auto;
+  top: 285px;
+}
 
-#slotMachine, .reel, .lever {display: inline-block;}
-
-
-#slotMachine {
+#slot-machine {
   border-radius: 30px;
   padding: 20px 0 20px 0;
   display: flex;
-}
-
-
-#slotMachine {
   position: relative;
   width: 82%;
   height: 220px;
@@ -241,7 +240,8 @@
   text-align: center;
   text-indent: .1em;
 }
-#slotMachine:before {
+
+#slot-machine:before {
   content: '';
   position: absolute;
   top: 9%;
@@ -252,146 +252,41 @@
   border-radius: 5% / 50%;
 }
 
-
-
-  .reel {
-    text-align: center;
-    float: left;
-    padding: 0 10px;
-    width: 170px;
-    height: 180px;
-    overflow: hidden;
-    margin: auto;
-    border-radius: 22px;
-    background: #d0d7de;
-    box-shadow: inset 2px 4px 1em #727279;
-    border: solid rgba(0, 0, 0, 0.33) 1px;
-    z-index: 1;
-  }
-    .reel .innerReel {
-      position: relative;
-      top: -91px;
-      padding: 15px;
-      background: #7095bf;
-    }
-
-    .reel .innerReel div {
-      letter-spacing: 2px;
-      font-size: 30px;
-      font-family: Bangers, Helvetica;
-      position: relative;
-      height: 80px;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: rgba(0, 0, 0, 0.25) solid 2px;
-    }
-    .reel p {
-      font-weight: bold;
-      height: 60px;
-      margin-top: 10px;
-    }
-    .reel p:nth-child(1) {color:#c60}
-    .reel p:nth-child(2) {color:#690}
-    .reel p:nth-child(3) {color:#630}
-
-
-
-
-
-\\\\\\\
-
-
-
-#slotMachine {
-
-}
-
-
-html {
-  font-size: 20px;
-  font-family: Droid Sans, Helvetica;
-  background-color: #000000;
-}
-
-
-h1 {
-  font-size: 60px;
+.reel {
+  display: inline-block;
   text-align: center;
+  float: left;
+  padding: 0 10px;
+  width: 170px;
+  height: 180px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 22px;
+  background: #d0d7de;
+  box-shadow: inset 2px 4px 1em #727279;
+  border: solid rgba(0, 0, 0, 0.33) 1px;
+  z-index: 1;
 }
 
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-
-#wrapper {
-  width: 740px;
-  height: 385px;
-  /*background: linear-gradient(45deg, #868686 0%, #ececec 50%, #868686 100%);*/
-  padding: 20px 20px 20px 20px;
-  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
-  border-radius: 10%;
-  z-index: 2;
+.reel .inner-reel {
   position: relative;
-  margin: auto;
-  top: 285px;
+  top: -91px;
+  padding: 15px;
+  background: #7095bf;
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
-}
-
-#playFancy {
-  width: 233px;
-  height: 71px;
-  top: 311px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
+.reel .inner-reel div {
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: Bangers, Helvetica;
+  position: relative;
+  height: 80px;
+  padding: 15px;
   display: flex;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 0 20px;
-  border: none;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  font: normal normal bold 20px/40px "Baumans", Helvetica, sans-serif;
-  color: black;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  background: rgb(221, 221, 221);
-  -webkit-box-shadow: 0 1px 0 0 rgb(119,119,119) , 0 2px 0 0 rgb(119,119,119) , 0 3px 0 0 rgb(119,119,119) , 0 4px 0 0 rgb(119,119,119) , 0 5px 0 0 rgb(119,119,119) , 0 6px 0 0 rgb(119,119,119) , 0 0 5px 0 rgba(0,0,0,0.0980392) , 0 1px 3px 0 rgba(0,0,0,0.298039) , 0 3px 5px 0 rgba(0,0,0,0.2) , 0 5px 10px 0 rgba(0,0,0,0.247059) , 0 10px 10px 0 rgba(0,0,0,0.2) , 0 20px 20px 0 rgba(0,0,0,0.14902) ;
-  box-shadow: 0 1px 0 0 rgb(119,119,119) , 0 2px 0 0 rgb(119,119,119) , 0 3px 0 0 rgb(119,119,119) , 0 4px 0 0 rgb(119,119,119) , 0 5px 0 0 rgb(119,119,119) , 0 6px 0 0 rgb(119,119,119) , 0 0 5px 0 rgba(0,0,0,0.0980392) , 0 1px 3px 0 rgba(0,0,0,0.298039) , 0 3px 5px 0 rgba(0,0,0,0.2) , 0 5px 10px 0 rgba(0,0,0,0.247059) , 0 10px 10px 0 rgba(0,0,0,0.2) , 0 20px 20px 0 rgba(0,0,0,0.14902) ;
-  text-shadow: 0 1px 0 #FFFFFF ;
+  justify-content: center;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.25) solid 2px;
 }
-
-#playFancy:hover {
-  background: #FFFFFF;
-}
-
-#playFancy:active {
-  margin: 6px auto;
-  background: rgb(221, 221, 221);
-  -webkit-box-shadow: 0 -1px 10px 0 rgba(0,0,0,0.247059) , 0 4px 10px 0 rgba(0,0,0,0.2) , 0 14px 20px 0 rgba(0,0,0,0.14902) ;
-  box-shadow: 0 -1px 10px 0 rgba(0,0,0,0.247059) , 0 4px 10px 0 rgba(0,0,0,0.2) , 0 14px 20px 0 rgba(0,0,0,0.14902) ;
-}
-
-#playFancy:focus {
-  background: rgb(221, 221, 221);
-  outline: 0;
-}
-
 
 /*Positioning Lights CSS*/
 
@@ -430,6 +325,8 @@ h1 {
   top: 688px;
 }
 
+/* Slot Machine Features */
+
 #winner {
   font-size: 115px;
   position: absolute;
@@ -440,38 +337,6 @@ h1 {
   left: 0;
   right: 0;
   transform: perspective(520px) rotateX(-15deg);
-}
-
-#tea-img {
-  height: 72px;
-  top: 790px;
-}
-
-#espresso-img {
-  height: 50px;
-  top: 812px;
-}
-
-#coffee-img {
-  height: 82px;
-  top: 780px;
-}
-
-.images {
-  z-index: 5;
-  position: absolute;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-#footer{
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
 }
 
 #logo {
@@ -489,6 +354,49 @@ h1 {
   font-family: Bangers, Helvetica;
 }
 
-#thumbtack-logo {
+.thumbtack-logo {
   height: 75px;
+}
+
+/* Images */
+
+.images {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+#tea-img {
+  height: 72px;
+  top: 790px;
+}
+
+#espresso-img {
+  height: 50px;
+  top: 812px;
+}
+
+#coffee-img {
+  height: 82px;
+  top: 780px;
+}
+
+/* General */
+
+html {
+  font-size: 20px;
+  background-color: #000000;
+}
+
+#footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica;
+  color: white;
 }
