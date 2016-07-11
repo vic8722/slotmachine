@@ -53,15 +53,13 @@
         };
         // endNum = [endNum[0],endNum[0],endNum[0]]; // just for testing... always make a win.
         function declareWinner(){
-            var message;
+            $("#handle-joint1").removeClass("pullHandle");
+            $("#handle-joint2").removeClass("pullHandle");
             if (endNum[0]===endNum[1] && endNum[0]===endNum[2]) {
-                message = 'Congratulations you won '+ prizes[endNum[0]] + '!!';
                 prizeWon(displayPrizes[endNum[0]]);
             }
             else {
-                message = 'Rats! Try again?';
             }
-            $('#winnerStatus').html(message);
         };
     });
 
@@ -95,8 +93,6 @@ var prizeWon = function(prizeFunc){
     $(".led-orange").addClass('blink-orange');
     $(".led-blue").addClass('blink-blue');
     openDoor(prizeFunc);
-    $("#handle-joint1").removeClass("pullHandle");
-    $("#handle-joint2").removeClass("pullHandle");
 };
 
 function prizeTea(){
