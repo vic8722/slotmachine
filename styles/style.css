@@ -421,4 +421,14 @@ html {
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 6;
+}
+
+#created-by {
+  font-size: 20px;
+}
+
+
+#image-credit {
+  font-size: 10px;
 }
