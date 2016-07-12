@@ -56,9 +56,7 @@
             'display': 'flex',
             'height': '0px'
         });
-        $('#tray-door').animate({height: '10px'}, 400, 'linear', function() {
-                prizeFunc();
-            })
+        $('#tray-door').animate({height: '10px'}, 400, 'linear', prizeFunc)
     };
 
     function closeDoor() {
