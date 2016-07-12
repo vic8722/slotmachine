@@ -51,77 +51,77 @@
         };
     });
 
-function openDoor(prizeFunc) {
-    $('.images').css({
-        'display': 'flex',
-        'height': '0px'
-    });
-    $('#tray-door').animate({height: '10px'}, 400, 'linear', function() {
-            prizeFunc();
-        })
-};
+    function openDoor(prizeFunc) {
+        $('.images').css({
+            'display': 'flex',
+            'height': '0px'
+        });
+        $('#tray-door').animate({height: '10px'}, 400, 'linear', function() {
+                prizeFunc();
+            })
+    };
 
-function closeDoor() {
-    $('#tray-door').animate({height: '110px'}, 400, 'linear')
-};
+    function closeDoor() {
+        $('#tray-door').animate({height: '110px'}, 400, 'linear')
+    };
 
-function prizeWon(prizeFunc) {
-    $('#win-status').addClass('winner');
-    $('#win-status').html('<span id = \'winner\'>WINNER!</span>');
-    $('.led-orange').addClass('blink-orange');
-    $('.led-blue').addClass('blink-blue');
-    openDoor(prizeFunc);
-};
+    function prizeWon(prizeFunc) {
+        $('#win-status').addClass('winner');
+        $('#win-status').html('<span id = \'winner\'>WINNER!</span>');
+        $('.led-orange').addClass('blink-orange');
+        $('.led-blue').addClass('blink-blue');
+        openDoor(prizeFunc);
+    };
 
-function prizeTea() {
-    $('#tea-img').animate({height: '72px'}, 800, 'linear')
-};
+    function prizeTea() {
+        $('#tea-img').animate({height: '72px'}, 800, 'linear')
+    };
 
-function prizeEspresso() {
-    $('#espresso-img').animate({height: '50px'}, 800, 'linear')
-};
+    function prizeEspresso() {
+        $('#espresso-img').animate({height: '50px'}, 800, 'linear')
+    };
 
-function prizeCoffee() {
-    $('#coffee-img').animate({height: '82px'}, 800, 'linear')
-};
+    function prizeCoffee() {
+        $('#coffee-img').animate({height: '82px'}, 800, 'linear')
+    };
 
-// When the SPIN button is pushed or handle is clicked, animate the movement of the handle.
-function buttonPush() {
-    $('#handle-joint1').addClass('pull-handle');
-    $('#handle-joint2').addClass('pull-handle');
-    $('#handle-arm').animate({
-        top: '300px',
-        height: '0px'
-    }, 1000, 'linear', function() {
+    // When the SPIN button is pushed or handle is clicked, animate the movement of the handle.
+    function buttonPush() {
+        $('#handle-joint1').addClass('pull-handle');
+        $('#handle-joint2').addClass('pull-handle');
         $('#handle-arm').animate({
-            top: '45px',
-            height: '240px'
-        }, 1000, 'linear');
-    });
-    $('#handle-ball').animate({
-        top: '258px',
-        height: '64px',
-        width: '64px',
-        left: '14px'
-    }, 1000, 'linear', function() {
+            top: '300px',
+            height: '0px'
+        }, 1000, 'linear', function() {
+            $('#handle-arm').animate({
+                top: '45px',
+                height: '240px'
+            }, 1000, 'linear');
+        });
         $('#handle-ball').animate({
-            top: '10px',
-            height: '39px',
-            width: '39px',
-            left: '27px'
-        }, 1000, 'linear');
-    });
-}
+            top: '258px',
+            height: '64px',
+            width: '64px',
+            left: '14px'
+        }, 1000, 'linear', function() {
+            $('#handle-ball').animate({
+                top: '10px',
+                height: '39px',
+                width: '39px',
+                left: '27px'
+            }, 1000, 'linear');
+        });
+    }
 
-function resetGame() {
-    buttonPush();
-    closeDoor();
-    $('#win-status').removeClass('winner');
-    $('#win-status').html('');
+    function resetGame() {
+        buttonPush();
+        closeDoor();
+        $('#win-status').removeClass('winner');
+        $('#win-status').html('');
 
-    $('.led-orange').removeClass('blink-orange');
-    $('.led-blue').removeClass('blink-blue');
-}
+        $('.led-orange').removeClass('blink-orange');
+        $('.led-blue').removeClass('blink-blue');
+    }
 
 })(jQuery);
 
