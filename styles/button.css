@@ -56,12 +56,12 @@
   text-shadow: #f1b076 0px 0px 1px;
   transition: all 0.1s ease-in-out;
 }
-.button:hover .outer .height .inner{
+.button:hover .outer .height .inner {
   background: #e47613;
   background: linear-gradient(top, #f1b076 0%,#e47613 100%);
   text-shadow: #f1b076 0px 0px 1px;
 }
-.button:active .outer .height .inner{
+.button:active .outer .height .inner {
   background: #f1b076;
   background: linear-gradient(top, #f1b076 0%,#e47613 100%);
   border-radius: 16px;

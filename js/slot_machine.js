@@ -34,8 +34,8 @@
         }
 
         function declareWinner() {
-            $('#handle-joint1').removeClass('pullHandle');
-            $('#handle-joint2').removeClass('pullHandle');
+            $('#handle-joint1').removeClass('pull-handle');
+            $('#handle-joint2').removeClass('pull-handle');
             hasBeenClicked = false;
             if (endNum[0] === endNum[1] && endNum[0] === endNum[2]) {
                 prizeWon(displayPrizes[endNum[0]]);
@@ -87,8 +87,8 @@ function prizeCoffee() {
 
 // When the SPIN button is pushed or handle is clicked, animate the movement of the handle.
 function buttonPush() {
-    $('#handle-joint1').addClass('pullHandle');
-    $('#handle-joint2').addClass('pullHandle');
+    $('#handle-joint1').addClass('pull-handle');
+    $('#handle-joint2').addClass('pull-handle');
     $('#handle-arm').animate({
         top: '300px',
         height: '0px'

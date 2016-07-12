@@ -151,25 +151,47 @@
   z-index: 0;
 }
 
-.pullHandle {
-  animation: pullHandle 1s alternate 0s 2;
+.pull-handle {
+  animation: pull-handle 1s alternate 0s 2;
   background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
 }
 
 
 
-@keyframes pullHandle {
-    0% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%); }
-    10% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 52.5%,rgb(67, 67, 67) 100%); }
-    20% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 55%,rgb(67, 67, 67) 100%); }
-    30% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 57.5%,rgb(67, 67, 67) 100%); }
-    40% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 60%,rgb(67, 67, 67) 100%); }
-    50% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 62.5%,rgb(67, 67, 67) 100%); }
-    60% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 65%,rgb(67, 67, 67) 100%); }
-    70% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 67.5%,rgb(67, 67, 67) 100%); }
-    80% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 70%,rgb(67, 67, 67) 100%); }
-    90% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 72.5%,rgb(67, 67, 67) 100%); }
-    100% { background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 75%,rgb(67, 67, 67) 100%); }
+@keyframes pull-handle {
+    0% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 50%,rgb(67, 67, 67) 100%);
+    }
+    10% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 52.5%,rgb(67, 67, 67) 100%);
+    }
+    20% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 55%,rgb(67, 67, 67) 100%);
+    }
+    30% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 57.5%,rgb(67, 67, 67) 100%);
+    }
+    40% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 60%,rgb(67, 67, 67) 100%);
+    }
+    50% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 62.5%,rgb(67, 67, 67) 100%);
+    }
+    60% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 65%,rgb(67, 67, 67) 100%);
+    }
+    70% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 67.5%,rgb(67, 67, 67) 100%);
+    }
+    80% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 70%,rgb(67, 67, 67) 100%);
+    }
+    90% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 72.5%,rgb(67, 67, 67) 100%);
+    }
+    100% {
+      background: linear-gradient(to bottom, rgb(67, 67, 67) 0%,rgb(207, 210, 208) 75%,rgb(67, 67, 67) 100%);
+    }
 }
 
 #handle-ball {

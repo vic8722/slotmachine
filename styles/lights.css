@@ -27,14 +27,20 @@
 }
 
 .blink-blue {
-  animation: blinkBlue 500ms infinite;
+  animation: blink-blue 500ms infinite;
   animation-delay: 250ms;
   box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px;
 }
 
-@keyframes blinkBlue {
-  0%, 100% { background-color: #9fbee2; box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px; }
-  50% { background-color: #4092f1; box-shadow: #4092f1 0px 0px 22px 4px, #6f8daf 0px 0px 6px 1px, inset #2c6ab1 1px -2px 9px 0px; }
+@keyframes blink-blue {
+  0%, 100% {
+    background-color: #9fbee2;
+    box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px;
+  }
+  50% {
+    background-color: #4092f1;
+    box-shadow: #4092f1 0px 0px 22px 4px, #6f8daf 0px 0px 6px 1px, inset #2c6ab1 1px -2px 9px 0px;
+  }
 }
 
 
@@ -50,12 +56,18 @@
 
 .blink-orange {
   box-shadow: #f47503 0px 0px 22px 4px, #b19174 0px 0px 6px 1px, inset #b36c2c 1px -2px 9px 0px;
-  animation: blinkOrange 500ms infinite;
+  animation: blink-orange 500ms infinite;
 }
 
-@keyframes blinkOrange {
-  0%, 100% { background-color: #c7bcb2; box-shadow: #c39870 0px -1px 1px 1px, inset #a08c7a 2px -6px 15px;}
-  50% { background-color: #f47503; box-shadow: #f47503 0px 0px 22px 4px, #b19174 0px 0px 6px 1px, inset #b36c2c 1px -2px 9px 0px; }
+@keyframes blink-orange {
+  0%, 100% {
+    background-color: #c7bcb2;
+    box-shadow: #c39870 0px -1px 1px 1px, inset #a08c7a 2px -6px 15px;
+  }
+  50% {
+    background-color: #f47503;
+    box-shadow: #f47503 0px 0px 22px 4px, #b19174 0px 0px 6px 1px, inset #b36c2c 1px -2px 9px 0px;
+  }
 }
 
 /* Neon Word Coloring */
