@@ -1,5 +1,5 @@
 (function($) {
-    var displayPrizes = [prizeTea, prizeCoffee, prizeEspresso];
+    var displayPrizes = [prizeFrenchFries, prizeHamburger, prizeSoda];
     var hasBeenClicked = false;
     $('.spin').on('click', function() {
         if (hasBeenClicked) return;
@@ -71,16 +71,16 @@
         openDoor(prizeFunc);
     };
 
-    function prizeTea() {
-        $('#tea-img').animate({height: '72px'}, 800, 'linear')
+    function prizeSoda() {
+        $('#soda-img').animate({height: '98px'}, 800, 'linear')
     };
 
-    function prizeEspresso() {
-        $('#espresso-img').animate({height: '50px'}, 800, 'linear')
+    function prizeFrenchFries() {
+        $('#french-fries-img').animate({height: '90px'}, 800, 'linear')
     };
 
-    function prizeCoffee() {
-        $('#coffee-img').animate({height: '82px'}, 800, 'linear')
+    function prizeHamburger() {
+        $('#hamburger-img').animate({height: '82px'}, 800, 'linear')
     };
 
     // When the SPIN button is pushed or handle is clicked, animate the movement of the handle.

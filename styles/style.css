@@ -401,7 +401,7 @@
   z-index: 4;
 }
 
-.thumbtack-logo {
+.logo {
   height: 75px;
 }
 
@@ -417,19 +417,19 @@
   z-index: 5;
 }
 
-#tea-img {
-  height: 72px;
-  top: 790px;
+#soda-img {
+  height: 98px;
+  top: 763px;
 }
 
-#espresso-img {
-  height: 50px;
-  top: 812px;
+#french-fries-img {
+  height: 90px;
+  top: 771px;
 }
 
-#coffee-img {
+#hamburger-img {
   height: 82px;
-  top: 780px;
+  top: 778px;
 }
 
 /* General */
