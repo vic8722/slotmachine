@@ -1,1 +1,173 @@
-My Page
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Thumbtack Slot Machine Challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Monoton|Bangers|Open+Sans|Orbitron" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/lights.css" rel="stylesheet" type="text/css">
+    <link href="styles/button.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="slot-machine-container">
+      <div class="machine-structure" id="top"></div>
+      <div class="machine-structure" id="middle"></div>
+      <div class="machine-structure" id="middle2"></div>
+      <div class="machine-structure" id="bottom"></div>
+      <div id="top-inside"></div>
+      <div id="middle-inside"></div>
+      <div id="middle2-inside"></div>
+      <div id="bottom-inside"></div>
+      <div class="handle">
+        <div class="spin" id="handle-joint1" ></div>
+        <div class="spin" id="handle-joint2" ></div>
+        <div class="spin" id="handle-arm"></div>
+        <div class="spin" id="handle-ball"></div>
+      </div>
+      <div id="logo">
+        <img class="thumbtack-logo" src="https://static4.thumbtackstatic.com/theme/images/thumbtack2.png"/>
+        Slot Machine
+        <img class="thumbtack-logo" src="https://static4.thumbtackstatic.com/theme/images/thumbtack2.png"/>
+      </div>
+      <div class="machine" id="tray"></div>
+      <div class="machine" id="tray-door"></div>
+      <img id="tea-img" class="images" src="http://pics.clipartpng.com/Cup_of_Tea_PNG_Clipart-155.png" />
+      <img id="espresso-img" class="images" src="http://pics.clipartpng.com/Coffee_Cup_PNG_Clipart-401.png" />
+      <img id="coffee-img" class="images" src="http://pics.clipartpng.com/Brown_Coffee_Cup_PNG_Clipart-562.png" />
+    </div>
+    <div class="winner" id="win-status"><span id="winner">WINNER!</span></div>
+    <div class="lights" id="lights1">
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+    </div>
+    <div class="lights" id="lights2">
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+    </div>
+    <div class="lights" id="lights3">
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+    </div>
+    <div class="lights" id="lights4">
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+      <div class="led-blue blink-blue"></div>
+      <div class="led-orange blink-orange"></div>
+    </div>
+    <div id="wrapper">
+      <div id="slot-machine">
+        <div class="reel" id="reel1">
+          <div class="inner-reel">
+            <div>coffee maker</div>
+            <div>teapot</div>
+            <div>espresso machine</div>
+            <div>coffee maker</div>
+            <div>teapot</div>
+            <div>espresso machine</div>
+          </div>
+        </div>
+        <div class="reel" id="reel2">
+          <div class="inner-reel">
+            <div>coffee filter</div>
+            <div>tea strainer</div>
+            <div>espresso tamper</div>
+            <div>coffee filter</div>
+            <div>tea strainer</div>
+            <div>espresso tamper</div>
+          </div>
+        </div>
+        <div class="reel" id="reel3">
+          <div class="inner-reel">
+            <div>coffee grounds</div>
+            <div>loose tea</div>
+            <div>ground espresso beans</div>
+            <div>coffee grounds</div>
+            <div>loose tea</div>
+            <div>ground espresso beans</div>
+          </div>
+        </div>
+      </div>
+      <div class="button spin">
+        <div class="outer">
+          <div class="height">
+            <div class="inner">SPIN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <span id="created-by" >Created by <a href="mailto:victoria.ann.solorzano@gmail.com">Victoria Solorzano</a></span>
+      </br>
+      <span id="image-credit" >Drink images from <a href="http://www.clipartpng.com">clipartpng.com</a></span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slot_machine.js"></script>
+    <script type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>

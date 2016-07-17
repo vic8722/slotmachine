@@ -1,0 +1,95 @@
+.container {
+  background-size: cover;
+  padding: 20px;
+}
+
+.led-box {
+  float: left;
+  height: 30px;
+  margin: 10px 0;
+  width: 75%;
+}
+
+.led-box p {
+  font-size: 12px;
+  margin: 1em;
+  text-align: center;
+}
+
+.led-blue {
+  background-color: #9fbee2;
+  border-radius: 50%;
+  box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px;
+  display: inline-block;
+  height: 24px;
+  margin: 1px 1px auto;
+  width: 24px;
+}
+
+.blink-blue {
+  animation: blink-blue 500ms infinite;
+  animation-delay: 250ms;
+  box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px;
+}
+
+@keyframes blink-blue {
+  0%, 100% {
+    background-color: #9fbee2;
+    box-shadow: #8daed4 0px -1px 1px 1px, inset #7e90a5 2px -6px 15px;
+  }
+  50% {
+    background-color: #4092f1;
+    box-shadow: #4092f1 0px 0px 22px 4px, #6f8daf 0px 0px 6px 1px, inset #2c6ab1 1px -2px 9px 0px;
+  }
+}
+
+
+.led-orange {
+  background-color: #c7bcb2;
+  border-radius: 50%;
+  box-shadow: #c39870 0px -1px 1px 1px, inset #a08c7a 2px -6px 15px;
+  display: inline-block;
+  height: 24px;
+  margin: 1px 1px auto;
+  width: 24px;
+}
+
+.blink-orange {
+  box-shadow: #f47503 0px 0px 22px 4px, #b19174 0px 0px 6px 1px, inset #b36c2c 1px -2px 9px 0px;
+  animation: blink-orange 500ms infinite;
+}
+
+@keyframes blink-orange {
+  0%, 100% {
+    background-color: #c7bcb2;
+    box-shadow: #c39870 0px -1px 1px 1px, inset #a08c7a 2px -6px 15px;
+  }
+  50% {
+    background-color: #f47503;
+    box-shadow: #f47503 0px 0px 22px 4px, #b19174 0px 0px 6px 1px, inset #b36c2c 1px -2px 9px 0px;
+  }
+}
+
+/* Neon Word Coloring */
+
+.winner {
+  animation: neon 1.5s ease-in-out infinite alternate;
+  color: #fff;
+  font-family: Monoton;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+/*glow*/
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f47503, 0 0 70px #f47503, 0 0 80px #f47503, 0 0 100px #f47503, 0 0 150px #f47503;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f47503, 0 0 35px #f47503, 0 0 40px #f47503, 0 0 50px #f47503, 0 0 75px #f47503;
+  }
+}
